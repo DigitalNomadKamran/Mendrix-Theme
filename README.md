@@ -16,7 +16,7 @@ Mendrix Consultancy is a premium Full Site Editing (FSE) WordPress theme tailore
 ## Getting Started
 
 1. **Download the theme**
-   - Build the distributable archive: `zip -r dist/mendrix-consultancy.zip mendrix-consultancy`
+   - Run `./build-zip.sh` (requires the `zip` CLI) to create `dist/mendrix-consultancy.zip` with the correct directory structure.
    - Upload `dist/mendrix-consultancy.zip` via **Appearance → Themes → Add New → Upload**.
 2. **Activate** the “Mendrix Consultancy” theme.
 3. **Install recommended plugins**
