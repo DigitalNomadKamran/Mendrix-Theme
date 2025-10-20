@@ -1,0 +1,19 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mendrix Consultancy 1.0.0\n"
+"Language: ar\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0?0:n==1?1:n==2?2:n%100>=3 && n%100<=10?3:n%100>=11 && n%100<=99?4:5;\n"
+
+msgid "Book Consultation"
+msgstr "احجز استشارة"
+
+msgid "Primary Menu"
+msgstr "القائمة الرئيسية"
+
+msgid "Footer Menu"
+msgstr "قائمة التذييل"
+
+msgid "Ensure the required plugins such as Contact Form 7 are activated before importing."
+msgstr "تأكد من تفعيل الإضافات المطلوبة مثل Contact Form 7 قبل إجراء الاستيراد."

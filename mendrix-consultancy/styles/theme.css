@@ -1,0 +1,167 @@
+:root {
+  --mendrix-primary: #dc0000;
+  --mendrix-accent: #dd0000;
+  --mendrix-text: #636869;
+  --mendrix-muted: #f7f7f7;
+  --mendrix-background: #ffffff;
+  --mendrix-radius-card: 16px;
+  --mendrix-shadow-card: 0 12px 30px rgba(99, 104, 105, 0.08);
+}
+
+body {
+  font-family: var(--wp--preset--font-family--inter);
+  color: var(--mendrix-text);
+  background-color: var(--mendrix-background);
+  -webkit-font-smoothing: antialiased;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.wp-site-blocks {
+  scroll-behavior: smooth;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+  border-color: var(--mendrix-accent);
+  color: var(--mendrix-accent);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover,
+.wp-block-button.is-style-outline .wp-block-button__link:focus {
+  background-color: var(--mendrix-accent);
+  color: #fff;
+}
+
+.card-shadow {
+  box-shadow: var(--mendrix-shadow-card);
+  border-radius: var(--mendrix-radius-card);
+}
+
+.has-card-radius {
+  border-radius: var(--mendrix-radius-card);
+}
+
+.wp-block-navigation__responsive-container.is-menu-open {
+  padding: 2rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 1rem;
+  background: #000;
+  color: #fff;
+  padding: 1rem;
+  z-index: 999;
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+.wp-block-query .wp-block-post-template {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.wp-block-post-featured-image img {
+  border-radius: var(--mendrix-radius-card);
+}
+
+.wp-block-query-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.wp-block-navigation .has-child .wp-block-navigation__submenu-container {
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: var(--mendrix-background);
+  box-shadow: var(--mendrix-shadow-card);
+}
+
+.wp-block-navigation .wp-block-navigation-item__label {
+  letter-spacing: 0.02em;
+}
+
+.wp-block-navigation a.wp-block-button__link {
+  font-weight: 600;
+}
+
+.wp-block-cover.is-style-mendrix-hero::before {
+  background: linear-gradient(135deg, rgba(220, 0, 0, 0.8), rgba(31, 31, 31, 0.85));
+}
+
+.mendrix-process-step::before {
+  content: attr(data-step);
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background-color: rgba(220, 0, 0, 0.1);
+  color: var(--mendrix-primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.mendrix-contact-strip a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  background: var(--mendrix-muted);
+  color: var(--mendrix-text);
+  text-decoration: none;
+}
+
+.mendrix-contact-strip a:hover {
+  background: rgba(220, 0, 0, 0.08);
+  color: var(--mendrix-primary);
+}
+
+.focus-visible:focus {
+  outline: 2px solid var(--mendrix-primary);
+  outline-offset: 3px;
+}
+
+.mendrix-newsletter-form {
+  display: flex;
+  justify-content: center;
+}
+
+.mendrix-newsletter-fields {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.mendrix-newsletter-fields input[type="email"] {
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(99, 104, 105, 0.3);
+  min-width: 260px;
+}
+
+.mendrix-newsletter-fields button {
+  background: var(--mendrix-primary);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mendrix-map iframe {
+  border-radius: 16px;
+}

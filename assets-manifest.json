@@ -1,0 +1,182 @@
+[
+  {
+    "path": "mendrix-consultancy/assets/images/blog-1.png",
+    "purpose": "Blog post thumbnail for student visa insights",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/blog-2.png",
+    "purpose": "Blog post thumbnail covering Malaysia immigration",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/blog-3.png",
+    "purpose": "Blog post thumbnail featuring business expansion guidance",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/cta-1920x1080.png",
+    "purpose": "Full-width consultation call-to-action background",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/hero-1920x1080.png",
+    "purpose": "Homepage hero banner",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/hero-800x600.png",
+    "purpose": "Alternative hero image for smaller layouts",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/hero.jpg",
+    "purpose": "Legacy hero fallback image",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/icon-briefcase.png",
+    "purpose": "Services icon representing business expansion",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/icon-cap.png",
+    "purpose": "Services icon representing study visa advisory",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/icon-clock.png",
+    "purpose": "Process icon illustrating turnaround times",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/icon-passport.png",
+    "purpose": "Services icon representing immigration documentation",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/icon-shield.png",
+    "purpose": "Trust marker icon for compliance messaging",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/logo-1.png",
+    "purpose": "Client logo placeholder for trust carousel",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/logo-2.png",
+    "purpose": "Client logo placeholder for trust carousel",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/logo-3.png",
+    "purpose": "Client logo placeholder for trust carousel",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/logo-4.png",
+    "purpose": "Client logo placeholder for trust carousel",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/logo-5.png",
+    "purpose": "Client logo placeholder for trust carousel",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/logo-6.png",
+    "purpose": "Client logo placeholder for trust carousel",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/logo.png",
+    "purpose": "Primary Mendrix Consultancy logomark PNG",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/logo.svg",
+    "purpose": "Primary Mendrix Consultancy logomark SVG",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/team-1.png",
+    "purpose": "Team member headshot placeholder",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/team-2.png",
+    "purpose": "Team member headshot placeholder",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/team-3.png",
+    "purpose": "Team member headshot placeholder",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/testimonial-1.png",
+    "purpose": "Testimonial portrait placeholder",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/testimonial-2.png",
+    "purpose": "Testimonial portrait placeholder",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/assets/images/testimonial-3.png",
+    "purpose": "Testimonial portrait placeholder",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/screenshot.png",
+    "purpose": "Theme preview screenshot for WordPress theme selector",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/demo/content.xml",
+    "purpose": "One Click Demo Import WXR content file",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/demo/customizer.dat",
+    "purpose": "One Click Demo Import customizer settings",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/demo/preview-home.png",
+    "purpose": "Demo preview thumbnail for importer UI",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/demo/widgets.json",
+    "purpose": "Legacy widgets configuration for demo import",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "dist/mendrix-consultancy.zip",
+    "purpose": "Installable Mendrix Consultancy theme package",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/languages/mendrix-consultancy-ar.mo",
+    "purpose": "Arabic translation binary catalog",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/languages/mendrix-consultancy-en_GB.mo",
+    "purpose": "British English translation binary catalog",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/languages/mendrix-consultancy-en_US.mo",
+    "purpose": "American English translation binary catalog",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  },
+  {
+    "path": "mendrix-consultancy/languages/mendrix-consultancy-ms_MY.mo",
+    "purpose": "Malay (Malaysia) translation binary catalog",
+    "note": "Ignored in text-only PR; present on disk; push via Git LFS using scripts."
+  }
+]
