@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mendrix Consultancy 1.0.0\n"
+"Language: ms_MY\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Book Consultation"
+msgstr "Tempah Sesi Konsultasi"
+
+msgid "Primary Menu"
+msgstr "Menu Utama"
+
+msgid "Footer Menu"
+msgstr "Menu Pengaki"
+
+msgid "Ensure the required plugins such as Contact Form 7 are activated before importing."
+msgstr "Pastikan pemalam diperlukan seperti Contact Form 7 diaktifkan sebelum mengimport."

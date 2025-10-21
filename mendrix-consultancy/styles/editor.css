@@ -1,0 +1,12 @@
+body.editor-styles-wrapper {
+  font-family: var(--wp--preset--font-family--inter);
+  color: var(--wp--preset--color--text);
+}
+
+.editor-styles-wrapper .wp-block {
+  max-width: var(--wp--style--global--content-size);
+}
+
+.editor-styles-wrapper .wp-block[data-align="wide"] {
+  max-width: var(--wp--style--global--wide-size);
+}

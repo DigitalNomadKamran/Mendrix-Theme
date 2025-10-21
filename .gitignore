@@ -46,3 +46,19 @@ wp-config.php
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
+mendrix-consultancy/assets/images/**/*.png
+mendrix-consultancy/assets/images/**/*.jpg
+mendrix-consultancy/assets/images/**/*.jpeg
+mendrix-consultancy/assets/images/**/*.gif
+mendrix-consultancy/assets/images/**/*.svg
+mendrix-consultancy/assets/images/**/*.webp
+mendrix-consultancy/screenshot.png
+mendrix-consultancy/demo/**/*.xml
+mendrix-consultancy/demo/**/*.wie
+mendrix-consultancy/demo/**/*.dat
+mendrix-consultancy/demo/**/*.{png,jpg,jpeg}
+dist/**/*.zip
+mendrix-consultancy/languages/**/*.mo
+mendrix-consultancy/demo/**/*.png
+mendrix-consultancy/demo/**/*.jpg
+mendrix-consultancy/demo/**/*.jpeg
