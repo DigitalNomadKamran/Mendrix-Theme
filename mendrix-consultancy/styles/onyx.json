@@ -1,0 +1,60 @@
+{
+  "title": "Onyx",
+  "slug": "onyx",
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "background", "color": "#0f1115" },
+        { "slug": "surface", "color": "#181b21" },
+        { "slug": "muted", "color": "#242832" },
+        { "slug": "text", "color": "#e7eaee" },
+        { "slug": "primary", "color": "#dc0000" },
+        { "slug": "accent", "color": "#ff4d4d" }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#0f1115",
+      "text": "#e7eaee"
+    },
+    "typography": {
+      "fontSize": "clamp(1rem, 0.95rem + 0.25vw, 1.15rem)",
+      "lineHeight": "1.7",
+      "letterSpacing": "0.005em"
+    },
+    "elements": {
+      "heading": {
+        "color": {
+          "text": "#ffffff"
+        },
+        "typography": {
+          "fontSize": "clamp(2.4rem, 2rem + 1.6vw, 3.8rem)",
+          "letterSpacing": "0.04em",
+          "fontWeight": "700"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "#dc0000",
+          "text": "#ffffff"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "#ff4d4d"
+        }
+      }
+    },
+    "blocks": {
+      "core/group": {
+        "color": {
+          "background": "#181b21"
+        },
+        "border": {
+          "radius": "18px"
+        }
+      }
+    }
+  }
+}

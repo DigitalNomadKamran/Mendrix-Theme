@@ -4,17 +4,20 @@
   --mendrix-text: #636869;
   --mendrix-muted: #f7f7f7;
   --mendrix-background: #ffffff;
-  --mendrix-radius-card: 16px;
-  --mendrix-shadow-card: 0 12px 30px rgba(99, 104, 105, 0.08);
+  --mendrix-radius-card: var(--wp--custom--radius--card, 16px);
+  --mendrix-radius-pill: var(--wp--custom--radius--pill, 999px);
   --mendrix-radius-xl: var(--wp--custom--radius--xl, 24px);
   --mendrix-radius-2xl: var(--wp--custom--radius--2xl, 32px);
+  --mendrix-shadow-card: var(--wp--custom--shadow--card, 0 12px 30px rgba(99, 104, 105, 0.08));
   --mendrix-shadow-soft: var(--wp--custom--shadow--soft, 0 18px 38px rgba(31, 31, 31, 0.08));
   --mendrix-focus-ring: var(--wp--custom--shadow--focus, 0 0 0 3px rgba(220, 0, 0, 0.35));
   --motion-fast: var(--wp--custom--motion--duration--fast, 160ms);
   --motion-normal: var(--wp--custom--motion--duration--normal, 280ms);
   --motion-slow: var(--wp--custom--motion--duration--slow, 480ms);
+  --motion-slower: var(--wp--custom--motion--duration--slower, 640ms);
   --motion-ease: var(--wp--custom--motion--easing--standard, cubic-bezier(0.4, 0, 0.2, 1));
   --motion-ease-emphasized: var(--wp--custom--motion--easing--emphasized, cubic-bezier(0.34, 1.56, 0.64, 1));
+  --motion-ease-gentle: var(--wp--custom--motion--easing--gentle, cubic-bezier(0.2, 0, 0, 1));
 }
 
 body {
@@ -29,12 +32,22 @@ a:focus {
   text-decoration: underline;
 }
 
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 0;
+  box-shadow: var(--mendrix-focus-ring);
+}
+
 .wp-site-blocks {
   scroll-behavior: smooth;
 }
 
 .wp-block-button__link {
-  border-radius: var(--wp--custom--radius--button, 999px);
+  border-radius: var(--mendrix-radius-pill);
   transition: background-color var(--motion-fast) var(--motion-ease),
     color var(--motion-fast) var(--motion-ease),
     box-shadow var(--motion-fast) var(--motion-ease);
@@ -84,10 +97,12 @@ a:focus {
   color: #fff;
   padding: 1rem;
   z-index: 999;
+  border-radius: var(--mendrix-radius-pill);
+  transition: transform var(--motion-fast) var(--motion-ease-gentle);
 }
 
 .skip-link:focus {
-  left: 1rem;
+  transform: translateX(9999px);
 }
 
 .wp-block-query .wp-block-post-template {
@@ -107,7 +122,7 @@ a:focus {
 }
 
 .wp-block-navigation .has-child .wp-block-navigation__submenu-container {
-  border-radius: 12px;
+  border-radius: var(--wp--custom--radius--md, 12px);
   padding: 1rem;
   background-color: var(--mendrix-background);
   box-shadow: var(--mendrix-shadow-card);
@@ -128,9 +143,9 @@ a:focus {
 .mendrix-process-step::before {
   content: attr(data-step);
   display: block;
-  width: 56px;
-  height: 56px;
-  border-radius: 28px;
+  inline-size: 56px;
+  block-size: 56px;
+  border-radius: calc(56px / 2);
   background-color: rgba(220, 0, 0, 0.1);
   color: var(--mendrix-primary);
   font-weight: 700;
@@ -138,18 +153,21 @@ a:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
 }
 
 .mendrix-contact-strip a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  border-radius: 999px;
+  padding-block: 0.75rem;
+  padding-inline: 1.25rem;
+  border-radius: var(--mendrix-radius-pill);
   background: var(--mendrix-muted);
   color: var(--mendrix-text);
   text-decoration: none;
+  transition: background-color var(--motion-fast) var(--motion-ease),
+    color var(--motion-fast) var(--motion-ease);
 }
 
 .mendrix-contact-strip a:hover {
@@ -184,6 +202,11 @@ a:focus {
   padding-block: 0.85rem;
 }
 
+.btn--ghost.btn--pill .wp-block-button__link,
+.wp-block-button__link.btn--ghost.btn--pill {
+  border-radius: var(--mendrix-radius-2xl);
+}
+
 .img--soft-shadow {
   box-shadow: var(--mendrix-shadow-soft);
   border-radius: var(--mendrix-radius-card);
@@ -198,6 +221,284 @@ a:focus {
   border-radius: inherit;
 }
 
+.icon,
+.icon-inline svg {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  display: inline-flex;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.icon--xs {
+  inline-size: 0.875rem;
+  block-size: 0.875rem;
+}
+
+.icon--sm {
+  inline-size: 1rem;
+  block-size: 1rem;
+}
+
+.icon--lg {
+  inline-size: 1.75rem;
+  block-size: 1.75rem;
+}
+
+.icon-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  border-radius: 999px;
+  background: rgba(220, 0, 0, 0.08);
+  color: var(--mendrix-primary);
+}
+
+.mendrix-metrics-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.mendrix-metrics-grid .metric {
+  padding: 1.75rem;
+  border-radius: var(--mendrix-radius-card);
+  background: var(--mendrix-muted);
+  box-shadow: var(--mendrix-shadow-card);
+  text-align: center;
+}
+
+.mendrix-metrics-grid .metric strong {
+  font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.6rem);
+  color: var(--mendrix-primary);
+  display: block;
+}
+
+.mendrix-team-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.mendrix-team-grid .team-card {
+  padding: 1.75rem;
+  border-radius: var(--mendrix-radius-card);
+  background: var(--mendrix-background);
+  box-shadow: var(--mendrix-shadow-card);
+  transition: transform var(--motion-fast) var(--motion-ease),
+    box-shadow var(--motion-fast) var(--motion-ease);
+}
+
+.mendrix-team-grid .team-card:hover,
+.mendrix-team-grid .team-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: var(--wp--custom--shadow--medium, 0 20px 45px rgba(99, 104, 105, 0.16));
+}
+
+.mendrix-team-grid .team-card .team-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-block-start: 0.75rem;
+}
+
+.mendrix-team-grid .team-card .team-chip {
+  padding-block: 0.25rem;
+  padding-inline: 0.75rem;
+  border-radius: var(--mendrix-radius-pill);
+  font-size: 0.75rem;
+  background: rgba(220, 0, 0, 0.08);
+  color: var(--mendrix-primary);
+}
+
+.mendrix-sticky-bar {
+  position: sticky;
+  inset-block-end: 1.5rem;
+  inset-inline: auto;
+  z-index: 50;
+  margin-inline: auto;
+  max-inline-size: var(--wp--custom--layout--wide, 1200px);
+  padding-inline: 1.5rem;
+}
+
+.mendrix-sticky-bar .sticky-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--mendrix-radius-2xl);
+  background: var(--mendrix-background);
+  box-shadow: var(--mendrix-shadow-soft);
+}
+
+.mendrix-ribbon {
+  position: relative;
+  padding: 2.5rem;
+  border-radius: var(--mendrix-radius-2xl);
+  background: linear-gradient(135deg, rgba(220, 0, 0, 0.92), rgba(221, 0, 0, 0.75));
+  color: #fff;
+  overflow: hidden;
+}
+
+.mendrix-ribbon::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: -20%;
+  inset-block-start: 0;
+  inline-size: 60%;
+  block-size: 100%;
+  transform: skewX(-18deg);
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.mendrix-ribbon .wp-block-buttons .wp-block-button__link {
+  background: #fff;
+  color: var(--mendrix-primary);
+}
+
+.mendrix-trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mendrix-trust-badges .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: var(--mendrix-radius-pill);
+  background: var(--mendrix-muted);
+}
+
+.mendrix-contact-list {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.mendrix-contact-list .contact-card {
+  padding: 1.5rem;
+  border-radius: var(--mendrix-radius-card);
+  background: var(--mendrix-background);
+  box-shadow: var(--mendrix-shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mendrix-service-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.mendrix-service-grid .service-card {
+  padding: 1.75rem;
+  border-radius: var(--mendrix-radius-card);
+  background: var(--mendrix-background);
+  box-shadow: var(--mendrix-shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform var(--motion-fast) var(--motion-ease),
+    box-shadow var(--motion-fast) var(--motion-ease);
+}
+
+.mendrix-service-grid .service-card:hover,
+.mendrix-service-grid .service-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: var(--wp--custom--shadow--medium, 0 20px 45px rgba(99, 104, 105, 0.16));
+}
+
+.mendrix-faq details {
+  border-radius: var(--mendrix-radius-card);
+  padding: 1.25rem 1.5rem;
+  background: var(--mendrix-muted);
+  margin-block-end: 1rem;
+  transition: background-color var(--motion-fast) var(--motion-ease);
+}
+
+.mendrix-faq details[open] {
+  background: rgba(220, 0, 0, 0.08);
+}
+
+.mendrix-faq summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.mendrix-form-shell {
+  padding: 2rem;
+  border-radius: var(--mendrix-radius-card);
+  background: var(--mendrix-background);
+  box-shadow: var(--mendrix-shadow-card);
+}
+
+.mendrix-form-shell form,
+.mendrix-form-shell .wp-block-contact-form-7-contact-form-selector {
+  display: grid;
+  gap: 1rem;
+}
+
+.mendrix-sticky-cta {
+  position: sticky;
+  inset-block-start: 2rem;
+}
+
+.mendrix-list-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+[data-team-filter] {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-block-end: 1.5rem;
+}
+
+[data-team-filter] .filter-chip {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: var(--mendrix-radius-pill);
+  background: rgba(220, 0, 0, 0.08);
+  color: var(--mendrix-primary);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 781px) {
+  .mendrix-sticky-bar .sticky-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mendrix-ribbon {
+    text-align: center;
+  }
+
+  .mendrix-trust-badges {
+    justify-content: center;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .wp-site-blocks {
     scroll-behavior: auto;
@@ -209,6 +510,21 @@ a:focus {
     transition-duration: 1ms !important;
     animation-duration: 1ms !important;
   }
+
+  .mendrix-sticky-bar,
+  .mendrix-sticky-cta {
+    position: static;
+  }
+}
+
+:where([dir="rtl"]) .mendrix-process-step::before {
+  margin-block-end: 1rem;
+}
+
+:where([dir="rtl"]) .mendrix-ribbon::after {
+  inset-inline-start: auto;
+  inset-inline-end: -20%;
+  transform: skewX(18deg);
 }
 
 .mendrix-newsletter-form {
@@ -224,21 +540,21 @@ a:focus {
 
 .mendrix-newsletter-fields input[type="email"] {
   padding: 0.75rem 1rem;
-  border-radius: 999px;
+  border-radius: var(--mendrix-radius-pill);
   border: 1px solid rgba(99, 104, 105, 0.3);
-  min-width: 260px;
+  min-inline-size: 260px;
 }
 
 .mendrix-newsletter-fields button {
   background: var(--mendrix-primary);
   color: #fff;
   border: none;
-  border-radius: 999px;
+  border-radius: var(--mendrix-radius-pill);
   padding: 0.75rem 1.5rem;
   font-weight: 600;
   cursor: pointer;
 }
 
 .mendrix-map iframe {
-  border-radius: 16px;
+  border-radius: var(--mendrix-radius-card);
 }

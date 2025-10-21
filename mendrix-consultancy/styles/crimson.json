@@ -1,0 +1,68 @@
+{
+  "title": "Crimson",
+  "slug": "crimson",
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "background", "color": "#fff6f6" },
+        { "slug": "surface", "color": "#ffffff" },
+        { "slug": "muted", "color": "#ffe2e2" },
+        { "slug": "text", "color": "#533a3a" },
+        { "slug": "primary", "color": "#dc0000" },
+        { "slug": "accent", "color": "#a30000" }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#fff6f6",
+      "text": "#533a3a"
+    },
+    "typography": {
+      "fontSize": "clamp(1rem, 0.96rem + 0.22vw, 1.18rem)",
+      "letterSpacing": "0.012em"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontSize": "clamp(2.2rem, 1.8rem + 1.4vw, 3.4rem)",
+          "letterSpacing": "0.02em"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "#dc0000",
+          "text": "#ffffff"
+        },
+        "typography": {
+          "letterSpacing": "0.05em",
+          "textTransform": "uppercase"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "#a30000"
+        }
+      }
+    },
+    "blocks": {
+      "core/group": {
+        "color": {
+          "background": "#ffffff"
+        },
+        "border": {
+          "radius": "20px"
+        },
+        "spacing": {
+          "padding": {
+            "top": "var(--wp--preset--spacing--md)",
+            "bottom": "var(--wp--preset--spacing--md)",
+            "left": "var(--wp--preset--spacing--md)",
+            "right": "var(--wp--preset--spacing--md)"
+          }
+        },
+        "shadow": "0 20px 40px rgba(220, 0, 0, 0.12)"
+      }
+    }
+  }
+}

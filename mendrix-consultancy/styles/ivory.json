@@ -1,0 +1,63 @@
+{
+  "title": "Ivory",
+  "slug": "ivory",
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "background", "color": "#ffffff" },
+        { "slug": "surface", "color": "#fdf8f3" },
+        { "slug": "muted", "color": "#f4efe8" },
+        { "slug": "text", "color": "#4c4f50" },
+        { "slug": "primary", "color": "#dc0000" },
+        { "slug": "accent", "color": "#dd0000" },
+        { "slug": "dark", "color": "#1f1f1f" }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#ffffff",
+      "text": "#4c4f50"
+    },
+    "typography": {
+      "fontSize": "clamp(1.05rem, 0.98rem + 0.3vw, 1.2rem)",
+      "letterSpacing": "0.01em",
+      "lineHeight": "1.75"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "letterSpacing": "0.015em",
+          "fontSize": "clamp(2.1rem, 1.6rem + 1.8vw, 3.1rem)"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "#dc0000",
+          "text": "#ffffff"
+        },
+        "typography": {
+          "letterSpacing": "0.04em"
+        },
+        "border": {
+          "radius": "999px"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "#dd0000"
+        }
+      }
+    },
+    "blocks": {
+      "core/group": {
+        "spacing": {
+          "padding": {
+            "top": "var(--wp--preset--spacing--lg)",
+            "bottom": "var(--wp--preset--spacing--lg)"
+          }
+        }
+      }
+    }
+  }
+}
