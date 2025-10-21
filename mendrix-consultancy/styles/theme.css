@@ -6,6 +6,15 @@
   --mendrix-background: #ffffff;
   --mendrix-radius-card: 16px;
   --mendrix-shadow-card: 0 12px 30px rgba(99, 104, 105, 0.08);
+  --mendrix-radius-xl: var(--wp--custom--radius--xl, 24px);
+  --mendrix-radius-2xl: var(--wp--custom--radius--2xl, 32px);
+  --mendrix-shadow-soft: var(--wp--custom--shadow--soft, 0 18px 38px rgba(31, 31, 31, 0.08));
+  --mendrix-focus-ring: var(--wp--custom--shadow--focus, 0 0 0 3px rgba(220, 0, 0, 0.35));
+  --motion-fast: var(--wp--custom--motion--duration--fast, 160ms);
+  --motion-normal: var(--wp--custom--motion--duration--normal, 280ms);
+  --motion-slow: var(--wp--custom--motion--duration--slow, 480ms);
+  --motion-ease: var(--wp--custom--motion--easing--standard, cubic-bezier(0.4, 0, 0.2, 1));
+  --motion-ease-emphasized: var(--wp--custom--motion--easing--emphasized, cubic-bezier(0.34, 1.56, 0.64, 1));
 }
 
 body {
@@ -22,6 +31,25 @@ a:focus {
 
 .wp-site-blocks {
   scroll-behavior: smooth;
+}
+
+.wp-block-button__link {
+  border-radius: var(--wp--custom--radius--button, 999px);
+  transition: background-color var(--motion-fast) var(--motion-ease),
+    color var(--motion-fast) var(--motion-ease),
+    box-shadow var(--motion-fast) var(--motion-ease);
+  box-shadow: none;
+}
+
+.wp-block-button__link:hover,
+.wp-block-button__link:focus {
+  background-color: var(--mendrix-accent);
+  color: #fff;
+}
+
+.wp-block-button__link:focus-visible {
+  outline: 0;
+  box-shadow: var(--mendrix-focus-ring);
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link {
@@ -130,8 +158,57 @@ a:focus {
 }
 
 .focus-visible:focus {
-  outline: 2px solid var(--mendrix-primary);
-  outline-offset: 3px;
+  outline: 0;
+  box-shadow: var(--mendrix-focus-ring);
+}
+
+.btn--ghost .wp-block-button__link,
+.wp-block-button__link.btn--ghost {
+  background: transparent;
+  color: var(--mendrix-primary);
+  border: 2px solid currentColor;
+}
+
+.btn--ghost .wp-block-button__link:hover,
+.btn--ghost .wp-block-button__link:focus,
+.wp-block-button__link.btn--ghost:hover,
+.wp-block-button__link.btn--ghost:focus {
+  background: rgba(220, 0, 0, 0.08);
+  color: var(--mendrix-primary);
+}
+
+.btn--pill .wp-block-button__link,
+.wp-block-button__link.btn--pill {
+  border-radius: var(--mendrix-radius-2xl);
+  padding-inline: 1.75rem;
+  padding-block: 0.85rem;
+}
+
+.img--soft-shadow {
+  box-shadow: var(--mendrix-shadow-soft);
+  border-radius: var(--mendrix-radius-card);
+}
+
+.img--rounded-xl {
+  border-radius: var(--mendrix-radius-xl);
+}
+
+.img--rounded-xl img,
+.img--soft-shadow img {
+  border-radius: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wp-site-blocks {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 1ms !important;
+    animation-duration: 1ms !important;
+  }
 }
 
 .mendrix-newsletter-form {

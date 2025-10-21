@@ -1,0 +1,74 @@
+[data-anim],
+.anim-fade-up,
+.anim-slide-l,
+.anim-slide-r,
+.anim-scale {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition-property: opacity, transform;
+  transition-duration: var(--motion-normal, 280ms);
+  transition-timing-function: var(--motion-ease, cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+.anim-fade-up {
+  transform: translate3d(0, 24px, 0);
+}
+
+.anim-slide-l {
+  transform: translate3d(-32px, 0, 0);
+}
+
+.anim-slide-r {
+  transform: translate3d(32px, 0, 0);
+}
+
+.anim-scale {
+  transform: scale(0.94);
+  transform-origin: center;
+}
+
+[data-anim].in-view,
+.anim-fade-up.in-view,
+.anim-slide-l.in-view,
+.anim-slide-r.in-view,
+.anim-scale.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+.stagger > * {
+  --stagger-index: var(--stagger-index, 0);
+  --stagger-step: var(--stagger-step, 120ms);
+  transition-delay: calc(var(--stagger-step) * var(--stagger-index));
+}
+
+.stagger > *:nth-child(1) { --stagger-index: 0; }
+.stagger > *:nth-child(2) { --stagger-index: 1; }
+.stagger > *:nth-child(3) { --stagger-index: 2; }
+.stagger > *:nth-child(4) { --stagger-index: 3; }
+.stagger > *:nth-child(5) { --stagger-index: 4; }
+.stagger > *:nth-child(6) { --stagger-index: 5; }
+.stagger > *:nth-child(7) { --stagger-index: 6; }
+.stagger > *:nth-child(8) { --stagger-index: 7; }
+.stagger > *:nth-child(9) { --stagger-index: 8; }
+.stagger > *:nth-child(10) { --stagger-index: 9; }
+
+.stagger:not(.in-view) > * {
+  transition-delay: 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-anim],
+  .anim-fade-up,
+  .anim-slide-l,
+  .anim-slide-r,
+  .anim-scale {
+    opacity: 1 !important;
+    transition-duration: 1ms !important;
+    transform: none !important;
+  }
+
+  .stagger > * {
+    transition-delay: 0s !important;
+  }
+}

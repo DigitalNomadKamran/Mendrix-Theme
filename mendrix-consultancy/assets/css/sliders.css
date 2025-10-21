@@ -1,0 +1,96 @@
+.js-slider {
+  display: grid;
+  gap: 1.75rem;
+  position: relative;
+}
+
+.js-slider__track {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.js-slider__track > * {
+  background: var(--mendrix-background, #ffffff);
+  border-radius: var(--wp--custom--radius--card, 16px);
+  box-shadow: var(--wp--custom--shadow--soft, 0 18px 38px rgba(31, 31, 31, 0.08));
+  padding: clamp(1.5rem, 1.2rem + 1vw, 2.5rem);
+}
+
+.js-slider__controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.js-slider__controls button,
+.js-slider__pagination button {
+  border: none;
+  background: rgba(220, 0, 0, 0.1);
+  color: var(--mendrix-primary, #dc0000);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-color var(--motion-fast, 160ms) var(--motion-ease, cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+.js-slider__controls button:hover,
+.js-slider__controls button:focus,
+.js-slider__pagination button:hover,
+.js-slider__pagination button:focus {
+  background: var(--mendrix-primary, #dc0000);
+  color: #fff;
+}
+
+.js-slider__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.js-slider__pagination button {
+  width: 0.75rem;
+  height: 0.75rem;
+  padding: 0;
+  border-radius: 999px;
+}
+
+.js-slider__pagination button.is-active {
+  background: var(--mendrix-primary, #dc0000);
+  color: #fff;
+}
+
+.js-slider.is-enhanced .js-slider__track {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.js-slider.is-enhanced .js-slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  transition: transform var(--motion-normal, 280ms) var(--motion-ease, cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+.js-slider.is-enhanced .js-slider__controls {
+  justify-content: space-between;
+}
+
+.js-slider:not(.is-enhanced) .js-slider__controls,
+.js-slider:not(.is-enhanced) .js-slider__pagination {
+  display: none;
+}
+
+.js-slider__controls button:focus-visible,
+.js-slider__pagination button:focus-visible {
+  outline: 3px solid rgba(220, 0, 0, 0.35);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-slider.is-enhanced .js-slide {
+    transition-duration: 1ms;
+  }
+}

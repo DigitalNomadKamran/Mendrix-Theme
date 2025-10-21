@@ -63,3 +63,10 @@ All theme imagery is bundled under `mendrix-consultancy/assets/images/` and incl
 ## Licensing
 
 The theme is released under the [GNU General Public License v2.0](LICENSE).
+
+## Using Animations & Sliders
+
+- **Adding scroll animations:** Select any block in the editor, open **Block → Advanced → Additional CSS Class(es)**, and enter classes like `anim-fade-up`, `anim-slide-l`, `anim-slide-r`, `anim-scale`, or add `stagger` to cascade the reveal of child blocks. The theme only loads animation assets when these classes (or `data-anim` attributes) are present.
+- **Inserting the testimonial carousel:** From the Patterns panel, choose **Mendrix Media → Testimonial Slider**. Keep the generated `.js-slider`, `.js-slide`, pagination, and prev/next button markup intact so the JavaScript enhancement can attach and expose keyboard controls.
+- **Progressive enhancement tips:** Without JavaScript the slider renders as stacked testimonials. With scripts enabled, tab to the slider (or click the navigation buttons) and use the left/right arrow keys to cycle testimonials. Screen reader users hear polite updates via `aria-live` regions.
+- **Reduced motion checks:** Enable the “Reduce Motion” setting in your operating system or browser to confirm that animated elements remain visible without transitions. The theme disables transforms and respects those preferences automatically.
